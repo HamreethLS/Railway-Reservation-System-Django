@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Station - Train Schedule</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+{% include 'header.html' %}
+    <h1>Schedule for {{ train.name }}</h1>
+    <ul>
+        {% for schedule in schedules %}
+        <li>{{ schedile.station.name }} - Arival: {{ schedule.arrival_time }}, Departure: {{ schedule.departure_time }}
+
+        </li>
+        {% empty %}
+        <li>No schedules found for this train.</li>
+        {% endfor %}
+    </ul>
+{% include 'footer.html' %}
+</body>
+</html>

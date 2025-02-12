@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Station - View Ticket</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}"/>
+</head>
+<body>
+    {% include 'header.html' %}
+    <main>
+        <h2>Ticket Details</h2>
+        <div class="ticket">
+            <h3>Ticket Number: TKT12345</h3>
+            <table>
+                <tr>
+                    <th>Passenger Name</th>
+                    <td>John Doe</td>
+                </tr>
+                <tr>
+                    <th>Train Name</th>
+                    <td>Express 101</td>
+                </tr>
+                <tr>
+                    <th>From</th>
+                    <td>City A</td>
+                </tr>
+                <tr>
+                    <th>To</th>
+                    <td>City B</td>
+                </tr>
+                <tr>
+                    <th>Date of Travel</th>
+                    <td>2023-06-15</td>
+                </tr>
+                <tr>
+                    <th>Departure Time</th>
+                    <td>08:00</td>
+                </tr>
+                <tr>
+                    <th>Arrival Time</th>
+                    <td>12:00</td>
+                </tr>
+                <tr>
+                    <th>Seat Number</th>
+                    <td>A23</td>
+                </tr>
+                <tr>
+                    <th>Class</th>
+                    <td>Economy</td>
+                </tr>
+                <tr>
+                    <th>Fare</th>
+                    <td>$50.00</td>
+                </tr>
+            </table>
+        </div>
+        <div class="actions">
+            <a href="#" class="button">Print Ticket</a>
+            <a href="#" class="button">Cancel Ticket</a>
+        </div>
+    </main>
+{% include 'footer.html' %}
+</body>
+</html>

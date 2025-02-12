@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Station - Trains List</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    {% include 'header.html' %}
+    <main>
+        <h2>Available Trains</h2>
+        <table>
+            <tr>
+                <th>Train Name</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Schedule</th>
+                <th>Book</th>
+      
+            </tr>
+            {% for train in trains %}
+            <tr>
+                <td>{{ train.name }}</td>
+                <td>{{ train.source.name }}</td>
+                <td>{{ train.destination.name }}</td>
+                <td><a href = "{% url 'train_schedule' train.id %}">Schedule</a></td>
+                <td><a href="{% url 'booking' train.id %}">Book</a></td>
+
+                
+            </tr>
+            {% endfor %}
+        </table>
+    </main>
+{% include 'footer.html' %}
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+
+<header>
+    <h1>Central Railway Department</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'trains_list' %}">Trains</a></li>
+        <li><a href="{% url 'user_login' %}">Login</a></li>
+        <!-- <li><a href="{% url 'admin_login' %}">Admin Login</a></li> -->
+    </ul>
+</nav>
